@@ -6,16 +6,18 @@ import { User } from '../utils/typeorm';
 
 @Injectable()
 export class AuthService {
-    constructor(@InjectRepository(User) private readonly authRepository: Repository<User>) { }
+  constructor(
+    @InjectRepository(User) private readonly authRepository: Repository<User>,
+  ) {}
 
-    async createUserService(data) {
-        const existingUser = await this.authRepository.findOne({
-            where: { email: data.email },
-        });
-        if (existingUser)
-            throw new HttpException('User already exists', HttpStatus.CONFLICT);
+  async createUserService(data) {
+    const existingUser = await this.authRepository.findOne({
+      where: { email: data.email },
+    });
+    if (existingUser)
+      throw new HttpException('User already exists', HttpStatus.CONFLICT);
 
-        const newUser = this.authRepository.create(data);
-        return this.authRepository.save(newUser);
-    }
+    const newUser = this.authRepository.create(data);
+    return this.authRepository.save(newUser);
+  }
 }
