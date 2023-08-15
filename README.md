@@ -1,73 +1,55 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# NestChat: Messaging Nest
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Welcome to NestChat - the amazing messaging application! Here you'll find all the information you need to get started, use, and contribute to the project.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## About the Project
 
-## Description
+NestChat provides users with a seamless platform to exchange messages. With features such as user registration, authentication, and real-time messaging, it offers a modern communication experience. The project is designed with a client-server architecture in mind, where the client-side leverages React for dynamic interfaces and the server-side utilizes Nest.js for robust back-end functionality.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Features
 
-## Installation
+- **User Registration & Authentication:** Users can securely sign up, log in, and manage their profiles.
+- **Real-Time Messaging:** Engage in conversations by sending and receiving messages in real time.
+- **Material-UI Design:** The application boasts an intuitive and responsive Material-UI design for an enhanced user experience.
+- **Fluid Animations:** Elevate the visual appeal of the app with smooth animations powered by Framer Motion.
+- **State Management with Redux Toolkit:** Enjoy efficient state management using Redux Toolkit for streamlined data handling.
+- **Redux Toolkit Query:** Seamlessly interact with the server, fetch data, and manage responses with Redux Toolkit Query.
+- **PostgreSQL Database & TypeORM:** Leverage PostgreSQL, a powerful relational database, in conjunction with TypeORM for seamless data storage.
 
-```bash
-$ npm install
-```
+## Running the Project
 
-## Running the app
+### Client-side
 
-```bash
-# development
-$ npm run start
+1. Navigate to the client directory: `cd client`
+2. Install dependencies: `npm install`
+3. Start the app: `npm start`
 
-# watch mode
-$ npm run start:dev
+### Server-side
 
-# production mode
-$ npm run start:prod
-```
+1. Navigate to the server directory: `cd server`
+2. Install dependencies: `npm install`
+3. Create a `.env.development` file and provide PostgreSQL connection settings.
+4. Start the server: `npm run start:dev`
 
-## Test
+## Prerequisites
 
-```bash
-# unit tests
-$ npm run test
+- Node.js: version 14 or higher
+- PostgreSQL: installed and running database service
 
-# e2e tests
-$ npm run test:e2e
+## Contributing
 
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+I welcome contributions from the community! If you'd like to contribute, please follow my contribution guidelines.
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+The project is licensed under the MIT License. Feel free to use, modify, and distribute the code as permitted by the license.
+
+## Contact
+
+Thank you for considering my educational platform. I hope you find it valuable for learning and improving your programming skills! If you encounter any issues or have suggestions, please feel free to raise them in my issue tracker. Happy learning!
+
+Reach out to us via email: yesenyasha.work.dev@gmail.com.
+
+---
+
+Created with ❤️ and ☕️ by HannaPleshko
