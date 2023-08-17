@@ -6,9 +6,6 @@ export class User {
   id: number;
 
   @Column({ unique: true })
-  username: string;
-
-  @Column({ nullable: true })
   email: string;
 
   @Column()
@@ -17,6 +14,6 @@ export class User {
   @Column()
   lastName: string;
 
-  @Column({ select: false })
+  @Column()
   password: string;
 }

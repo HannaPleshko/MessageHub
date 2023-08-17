@@ -9,4 +9,9 @@ export class AuthController {
   async registerUser(@Body() data) {
     return await this.userService.createUserService(data);
   }
+
+  @Post('authenticate')
+  async authenticateUser(@Body() data) {
+    return await this.userService.getUserService(data);
+  }
 }
