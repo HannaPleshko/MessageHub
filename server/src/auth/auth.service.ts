@@ -6,16 +6,13 @@ import { User } from '../utils/typeorm';
 
 @Injectable()
 export class AuthService {
-  constructor(
-    @InjectRepository(User) private readonly authRepository: Repository<User>,
-  ) {}
+  constructor(@InjectRepository(User) private readonly authRepository: Repository<User>) {}
 
   async createUserService(data) {
     const existingUser = await this.authRepository.findOne({
       where: { email: data.email },
     });
-    if (existingUser)
-      throw new HttpException('User already exists', HttpStatus.CONFLICT);
+    if (existingUser) throw new HttpException('User already exists', HttpStatus.CONFLICT);
 
     const newUser = this.authRepository.create(data);
     return this.authRepository.save(newUser);
@@ -25,13 +22,11 @@ export class AuthService {
     const existingUser = await this.authRepository.findOne({
       where: { email: data.email },
     });
-    if (!existingUser)
-      throw new HttpException('User does not exists', HttpStatus.CONFLICT);
+    if (!existingUser) throw new HttpException('User does not exists', HttpStatus.CONFLICT);
     console.log(existingUser);
     console.log(data);
 
-    if (existingUser.password !== data.password)
-      throw new HttpException('Password does not match', HttpStatus.CONFLICT);
+    if (existingUser.password !== data.password) throw new HttpException('Password does not match', HttpStatus.CONFLICT);
 
     return this.authRepository.save(existingUser);
   }

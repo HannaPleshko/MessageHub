@@ -15,7 +15,6 @@ const NavForm: React.FC<NavFormProps> = ({ nav }) => {
 
   return (
     <Form form={form} name="horizontal_login" onFinish={onFinish}>
-
       <Item elems={nav} />
 
       <Form.Item shouldUpdate>
@@ -23,10 +22,7 @@ const NavForm: React.FC<NavFormProps> = ({ nav }) => {
           <Button
             type="primary"
             htmlType="submit"
-            disabled={
-              !form.isFieldsTouched(true) ||
-              !!form.getFieldsError().filter(({ errors }) => errors.length).length
-            }
+            disabled={!form.isFieldsTouched(true) || !!form.getFieldsError().filter(({ errors }) => errors.length).length}
           >
             Log in
           </Button>
@@ -36,4 +32,4 @@ const NavForm: React.FC<NavFormProps> = ({ nav }) => {
   );
 };
 
-export default NavForm
+export default NavForm;
