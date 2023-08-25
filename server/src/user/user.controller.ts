@@ -3,7 +3,7 @@ import { UserService } from './user.service';
 
 @Controller('user')
 export class UserController {
-  constructor(private readonly userService: UserService) { }
+  constructor(private readonly userService: UserService) {}
 
   @Get()
   async getUsers() {
@@ -11,22 +11,17 @@ export class UserController {
   }
 
   @Get(':id')
-  async getUser(@Param('id', ParseIntPipe) userId: number,) {
+  async getUser(@Param('id', ParseIntPipe) userId: number) {
     return await this.userService.getUserService(userId);
   }
 
   @Delete(':id')
-  async deleteUser(
-    @Param('id', ParseIntPipe) userId: number,
-  ) {
+  async deleteUser(@Param('id', ParseIntPipe) userId: number) {
     return await this.userService.deleteUserService(userId);
   }
 
   @Patch(':id')
-  async updateUser(
-    @Param('id', ParseIntPipe) userId: number,
-    @Body() data
-  ) {
+  async updateUser(@Param('id', ParseIntPipe) userId: number, @Body() data) {
     return await this.userService.updateUserService(userId, data);
   }
 }

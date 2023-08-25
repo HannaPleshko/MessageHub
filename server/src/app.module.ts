@@ -30,4 +30,4 @@ let envFilePath = '.env.development';
   controllers: [],
   providers: [],
 })
-export class AppModule { }
+export class AppModule {}
