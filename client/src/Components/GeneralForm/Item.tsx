@@ -1,5 +1,4 @@
 import React from 'react';
-import { UserOutlined } from '@ant-design/icons';
 import { Form, Input } from 'antd';
 
 interface ItemProps {
@@ -18,7 +17,7 @@ const Item: React.FC<ItemProps> = ({ elems }) => {
         },
       ]}
     >
-      <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder={el} />
+      <Input placeholder={el} />
     </Form.Item>
   ));
 };

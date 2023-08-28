@@ -1,12 +1,13 @@
 import React from 'react';
 import { Button, Form } from 'antd';
 import Item from './Item';
+import style from './style.module.css';
 
-interface NavFormProps {
+interface GeneralFormProps {
   nav: string[];
 }
 
-const NavForm: React.FC<NavFormProps> = ({ nav }) => {
+const GeneralForm: React.FC<GeneralFormProps> = ({ nav }) => {
   const [form] = Form.useForm();
 
   const onFinish = (values: any) => {
@@ -14,7 +15,7 @@ const NavForm: React.FC<NavFormProps> = ({ nav }) => {
   };
 
   return (
-    <Form form={form} name="horizontal_login" onFinish={onFinish}>
+    <Form form={form} name="horizontal_login" onFinish={onFinish} className={style.wrapper}>
       <Item elems={nav} />
 
       <Form.Item shouldUpdate>
@@ -32,4 +33,4 @@ const NavForm: React.FC<NavFormProps> = ({ nav }) => {
   );
 };
 
-export default NavForm;
+export default GeneralForm;

@@ -1,0 +1,36 @@
+@import './assets/styles';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  font-style: normal;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+:any-link {
+  text-decoration: none;
+  color: $primary-black;
+}
+
+input {
+  outline: none;
+  border: none;
+}
