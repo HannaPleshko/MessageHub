@@ -2,6 +2,8 @@ import React from 'react';
 import { Button, Form } from 'antd';
 import Item from './Item';
 import { useCreateUserMutation, useAuthenticateMutation } from '../../services';
+import { useNavigate } from 'react-router-dom';
+import { User } from '../../Interfaces/AppInterfaces';
 import { formTypes } from '../../utils/constants';
 import style from './style.module.scss';
 
@@ -14,12 +16,15 @@ const GeneralForm: React.FC<GeneralFormProps> = ({ nav, type }) => {
   const [createUser] = useCreateUserMutation();
   const [getUser] = useAuthenticateMutation();
 
+  const navigate = useNavigate()
+
   const [form] = Form.useForm();
 
-  const onFinish = async (values: any) => {
+  const onFinish = async (values: User) => {
     try {
       const data = type === formTypes.registration.type ? await createUser(values) : await getUser(values);
       console.info(data);
+      navigate('/messages')
     } catch (error) {
       console.error(error);
     }

@@ -8,3 +8,11 @@ export interface FormTypeMap {
   registration: FormConfig;
   authorization: FormConfig;
 }
+
+export interface User {
+  id?: number;
+  firstName?: string;
+  lastName?: string;
+  email: string;
+  password: string;
+}
