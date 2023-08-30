@@ -1,4 +1,4 @@
-# NestChat: MessageHub
+# MessageHub - Social Network for Message Exchange
 
 Welcome to NestChat - the amazing messaging application! Here you'll find all the information you need to get started, use, and contribute to the project.
 
