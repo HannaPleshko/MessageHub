@@ -10,10 +10,16 @@ export class MessageController {
     return await this.messageService.createMessageService(data);
   }
 
-  @Get(':creatorId/:recipientId')
-  async getMessages(@Param('creatorId', ParseIntPipe) creatorId: number, @Param('recipientId', ParseIntPipe) recipientId: number) {
-    const params = { creatorId, recipientId };
+  @Get(':creatorId')
+  async getMessages(@Param('creatorId', ParseIntPipe) creatorId: number) {
+    const params = { creatorId };
     return await this.messageService.getMessagesService(params);
+  }
+
+  @Get(':creatorId/:recipientId')
+  async getMessageById(@Param('creatorId', ParseIntPipe) creatorId: number, @Param('recipientId', ParseIntPipe) recipientId: number) {
+    const params = { creatorId, recipientId };
+    return await this.messageService.getMessageByIdService(params);
   }
 
   @Delete(':id')

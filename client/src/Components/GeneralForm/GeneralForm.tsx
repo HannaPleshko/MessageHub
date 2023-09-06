@@ -13,7 +13,7 @@ interface GeneralFormProps {
 }
 
 const GeneralForm: React.FC<GeneralFormProps> = ({ nav, type }) => {
-  const [createUser] = useCreateUserMutation();
+  const [createUser, { isSuccess }] = useCreateUserMutation();
   const [getUser] = useAuthenticateMutation();
 
   const navigate = useNavigate()
@@ -22,9 +22,11 @@ const GeneralForm: React.FC<GeneralFormProps> = ({ nav, type }) => {
 
   const onFinish = async (values: User) => {
     try {
-      const data = type === formTypes.registration.type ? await createUser(values) : await getUser(values);
-      console.info(data);
-      navigate('/messages')
+      const { data }: any = type === formTypes.registration.type ? await createUser(values) : await getUser(values);
+
+      if (!data) return
+
+      type === formTypes.registration.type ? navigate('/') : navigate('/messages', { state: { user: data } })
     } catch (error) {
       console.error(error);
     }

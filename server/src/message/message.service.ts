@@ -25,6 +25,18 @@ export class MessageService {
   async getMessagesService(params) {
     const messages = await this.messageRepository.find({
       where: {
+        creatorId: { id: params.creatorId },
+      },
+    });
+
+    if (!messages || !messages.length) throw new HttpException('Messages does not exist', HttpStatus.CONFLICT);
+
+    return messages;
+  }
+
+  async getMessageByIdService(params) {
+    const messages = await this.messageRepository.find({
+      where: {
         recipientId: { id: params.recipientId },
         creatorId: { id: params.creatorId },
       },

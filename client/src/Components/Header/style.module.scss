@@ -5,7 +5,7 @@
 
   .content {
     @include flexbox(space-between, center, row);
-    @include section(auto, 2% 0);
+    @include section(0, 2% );
 
     h1 {
       @include text($primary-black, 400, 20px, Roboto);
